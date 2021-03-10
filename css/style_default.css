@@ -1,1 +1,49 @@
+.send-msg-txt {
+  position: relative;
+  padding: 20px;
+  background-color: #fff9e0;
+  border: 2px solid #ac8400;
+  border-radius: 10px;
+}
 
+.send-msg-txt::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -15px;
+  top: 20px;
+  border-right: 15px solid #ac8400;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+.send-msg-txt::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -12px;
+  top: 20px;
+  border-right: 15px solid #fff9ec;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+.send-usr-name {
+  margin-bottom: 4px;
+}
+
+.send-time-stmp {
+  margin-bottom: 4px;
+}
+
+.fep-area {
+  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  padding-bottom: 200px;
+}
