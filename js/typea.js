@@ -14,8 +14,8 @@ function getTypingNow() {
         for (let i = 1; i < enteringDataNow.length; i++) {
             let typingUserID = enteringDataNow[i].typing_user_id;
             let typingRegistedDatetime = new Date(enteringDataNow[i].regist_datetime.replace(/-/g,"/"));
-            if (!datetimeNow.getTime() - typingRegistedDatetime.getTime() < 9900 && userIdNow != typingUserID) {
-                if (listTypingNow.includes(typingUserID)) {
+            if (datetimeNow.getTime() - typingRegistedDatetime.getTime() < 9900 && userIdNow != typingUserID) {
+                if (!listTypingNow.includes(typingUserID)) {
                     listTypingNow.push(typingUserID);
                     listTypingUserName.push(enteringDataNow[i].typing_user_name);
                 }
