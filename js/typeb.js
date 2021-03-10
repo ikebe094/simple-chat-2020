@@ -14,10 +14,10 @@ function getTypingNow() {
             if (datetimeNow.getTime() - typingRegistedDatetime.getTime() < 9900 && userIdNow != typingUserID) {
                 let tmpTxt = '入力している人がいます';
                 document.getElementById('typing_status_area').textContent = tmpTxt;
-                break;
+                return;
             }
-            document.getElementById('typing_status_area').textContent = "誰も入力していません";
         }
+        document.getElementById('typing_status_area').textContent = "誰も入力していません";
     }
 }
 
