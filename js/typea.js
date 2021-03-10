@@ -10,7 +10,6 @@ function getTypingNow() {
     request.onload = function () {
         const enteringDataNow = request.response;
         let datetimeNow = new Date(enteringDataNow[0].datenow.replace(/-/g,"/"));
-        console.log(datetimeNow) //safari対応確認
         for (let i = 1; i < enteringDataNow.length; i++) {
             let typingUserID = enteringDataNow[i].typing_user_id;
             let typingRegistedDatetime = new Date(enteringDataNow[i].regist_datetime.replace(/-/g,"/"));
