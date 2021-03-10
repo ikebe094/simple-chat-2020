@@ -17,7 +17,7 @@ function registTypingFnc() {
           requestTxt+="&uname="+userNameNow;
         }
         xhr.open("POST", 'regist_typing.php'+requestTxt, true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
         xhr.onreadystatechange = function () {
             if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
